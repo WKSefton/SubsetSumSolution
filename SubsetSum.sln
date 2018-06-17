@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "subsetprob", "subsetprob\subsetprob.csproj", "{7704E0DD-1C1D-4445-9202-F2E00C81CD5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetSum", "subsetprob\SubsetSum.csproj", "{7704E0DD-1C1D-4445-9202-F2E00C81CD5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
