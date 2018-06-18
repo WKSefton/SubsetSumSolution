@@ -8,7 +8,8 @@ namespace SubsetSum {
 	class Solve {
 
 		public List<int> Set = new List<int>();
-		
+		public DateTime TimeEnd { get; set; }
+
 		public Solve(int[] set, int target) {
 			bool[] pointer = new bool[set.Length];
 			Solving(set, pointer, target, 0, 0);
@@ -21,6 +22,7 @@ namespace SubsetSum {
 						Set.Add(set[i]);
 					}
 				}
+				TimeEnd = DateTime.Now;
 				return;
 			} else if (index == set.Length || sum > target) {
 				return ;

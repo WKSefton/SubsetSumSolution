@@ -15,6 +15,8 @@ namespace SubsetSum {
 		private double MaxDeviation { get; set; }
 		private	Random rand = new Random();
 
+		public Create() { }
+
 		public Create(int setsize, int targetSize, double deviation, int target) {
 			SetSize = setsize;
 			Target = target;
