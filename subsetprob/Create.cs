@@ -22,28 +22,21 @@ namespace SubsetSum {
 			Target = target;
 			TargetSize = targetSize;
 			Deviation = deviation / 100;
-
 			MaxDeviation = (double)(Target / TargetSize) / Target;
 			if (Deviation > MaxDeviation) {
 				Deviation = MaxDeviation;
 			}
-
 			Deviation = Target * Deviation;
 			Set = new int[TargetSize];
-
 			for (int i = 0; i < TargetSize; i++) {
 				Set[i] = ((Target) / (TargetSize));
-			}
-
-			for (int i = 0; i < TargetSize; i++) {
-				if (i % rand.Next(1, 2) == 0) {
+				if (i % rand.Next(2, 30) == 0) {
 					Set[i] -= rand.Next(1, (int)Deviation);
 
 				} else {
 					Set[i] += rand.Next(1, (int)Deviation);
 				}
 			}
-
 			while (Set.Sum() != Target) {
 				int remainder = Target - Set.Sum();
 				if (remainder <= 1) {
@@ -56,7 +49,6 @@ namespace SubsetSum {
 
 		public void FillSet() {
 			int[] set = new int[SetSize];
-
 			for (int i = 0; i < Set.Length; i++) {
 				set[i] = Set[i];
 			}
