@@ -12,27 +12,29 @@ namespace SubsetSum {
 
 		public Solve(int[] set, int target) {
 			bool[] pointer = new bool[set.Length];
-			Solving(set, pointer, target, 0, 0);
+			int sum = 0;
+			int index = 0;
+			Solving(set, pointer, target, sum, index);
 		}
 
 		private void Solving(int[] set, bool[] pointer, int target, int sum, int index) {
 			if (sum == target) {
+				TimeEnd = DateTime.Now;
 				for (int i = 0; i < pointer.Length; i++) {
 					if (pointer[i]) {
 						Set.Add(set[i]);
 					}
 				}
-				TimeEnd = DateTime.Now;
 				return;
 			} else if (index == set.Length || sum > target) {
-				return ;
+				return;
 			} else {
 				pointer[index] = true;
 				sum += set[index];
-				Solving(set, pointer, target, sum, index + 1);
+				Solving(set, pointer, target, sum, index+1);
 				sum -= set[index];
 				pointer[index] = false;
-				Solving(set, pointer, target, sum, index + 1);
+				Solving(set, pointer, target, sum, index+1);
 			}
 			return;
 		}

@@ -8,9 +8,9 @@ namespace SubsetSum {
 	class Program {
 
 		public static int Target = 100000000;
-		public static int TargetSize = 18;
-		public static double Deviation = 100;
-		public static int SetSize = 26;
+		//public static int TargetSize = 18;
+		//public static double Deviation = 100;
+		//public static int SetSize = 26;
 
 		public static TimeSpan TimeTaken = new TimeSpan();
 		public static List<int> Set = new List<int>() { 18897109, 12828837, 9461105,
